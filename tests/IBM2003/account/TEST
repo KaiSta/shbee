@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "TEST account program"
+
+SPECIAL="-maxTid=$[AVAIL_PROCS + 10]"
+
+rrrun ${SPECIAL} -classpath=account.jar -quiet -maxWarn=1 -noTidGC -tool=HB examples.account.Account

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "TEST BufWriter program"
+
+SPECIAL="-maxTid=$[AVAIL_PROCS + 40]"
+
+rrrun ${SPECIAL} -classpath=bufwriter.jar -quiet -maxWarn=1 -noTidGC -tool=HB examples.bufwriter.BufWriter

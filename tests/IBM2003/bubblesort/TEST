@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "TEST BubbleSort program"
+
+SPECIAL="-maxTid=$[AVAIL_PROCS + 40]"
+
+rrrun ${SPECIAL} -classpath=bubble.jar -quiet -maxWarn=1 -noTidGC -tool=HB examples.bubblesort.BubbleSort
