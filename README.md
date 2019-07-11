@@ -4,22 +4,21 @@ Prototype implementation of our race detection algorithms SHBEE, SHBE and SHB+.
 
 ## Description
 
-We consider the problem of data race prediction where the program's behavior
-is represented by a trace. A trace is a sequence of program events recorded
-during the execution of the program.
-We employ a variant of the classic happens-before relation,
-referred to as schedulable happens-before, to characterize
-all pairs of events that are in a race for the schedule as manifested in the trace.
-The challenge is to efficiently identify all (schedulable) data race pairs.
-We present a refined linear time vector clock algorithm
-to predict many of the schedulable data race pairs
-including all pairs due to write-read dependencies.
-We introduce a quadratic time post-processing algorithm to predict
-all remaining data race pairs.
-This improves the state of the art in the area and our experiments
-show that our approach scales to real-world examples.
-In addition, the programmer is supplied with detailed diagnostic information
-to track down data races. 
+  We consider the problem of data race prediction where the program's behavior
+  is represented by a trace. A trace is a sequence of program events recorded
+  during the execution of the program.
+  We employ the schedulable happens-before relation to characterize
+  all pairs of events that are in a race for the schedule as manifested in the trace.
+  Compared to the classic happens-before relation, the schedulable happens-before relations
+  properly takes care of write-read dependencies.
+  The challenge is to efficiently identify all (schedulable) data race pairs.
+  We present a refined linear time vector clock algorithm
+  to predict many of the schedulable data race pairs.
+  We introduce a quadratic time post-processing algorithm to predict
+  all remaining data race pairs.
+  This improves the state of the art in the area and our experiments
+  show that our approach scales to real-world examples.
+  Thus, the user can systematically examine and fix all program locations that are in a race.
 
 ## How to use
 
