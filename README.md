@@ -1,4 +1,4 @@
-# Predicting All Data Races for a Specific Trace Schedule More Efficiently
+# Predicting All Data Race Pairs for a Specific Schedule
 
 Prototype implementation of our race detection algorithms SHBEE, SHBE and SHB+. 
 
